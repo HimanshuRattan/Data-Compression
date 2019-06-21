@@ -1,11 +1,7 @@
 #512x512 means 512 rows and colums
-
-
 #we are going to map the values from 0-255 to 0-8
-
 #8 bits to represent value from 0-255
 #we will use 3 bit image which means 0-8
-
 import numpy
 from PIL import Image
 
@@ -27,10 +23,7 @@ pixelNew=img.load()
 8 bit means it can contain values upto 2^8
 
 we will do 2^8 -> 2^3
-
-
 we will map elemnts in a range
-
 0-31=0
 32-63=1
 64-95=2
@@ -40,7 +33,6 @@ we will map elemnts in a range
 192-223=6
 224-255=7
 '''
-
 #we will loop through the old image, see where the number is lying and change value
 
 for i in range(img.size[0]):
@@ -68,10 +60,3 @@ img.save('lena_2.jpg')
 
 #to see the matrix
 J=numpy.array(Image.open('lena_2.jpg'))
-
-
-
-
-
-
-
